@@ -1,0 +1,228 @@
+/* Login Form Section */
+.login-form {
+    background: #4b4747; /* Dark transparent background */
+    padding: 20px; /* Inner padding */
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Shadow effect */
+  }
+.left-side,
+.right-side {
+  flex: 1; /* Equal space for both sections */
+  max-width: 500px; /* Optional max width */
+  margin: 10px;
+  box-sizing: border-box;
+}
+  .login-form h2 {
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+    text-align: center;
+    color: #fff;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    font-size: 1rem;
+    color: #ccc;
+    margin-bottom: 5px;
+    display: block;
+  }
+  
+  .form-group input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    box-sizing: border-box;
+  }
+
+  
+  button.login-btn {
+    width: 100%;
+    padding: 12px;
+    background-color:#369e1c;
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+/* Explanation Section */
+.explanation {
+  background-color: rgba(255, 255, 255, 0.2); /* Subtle transparent background */
+  padding: 20px; /* Inner padding */
+  border-radius: 12px; /* Rounded corners */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Shadow effect */
+}
+  
+  .explanation h2 {
+    font-size: 1.6rem; /* Heading size */
+    margin-bottom: 10px; /* Space below heading */
+    color: #34da3c; /* Bright green */
+  }
+  
+  .explanation p {
+    font-size: 1rem; /* Paragraph font size */
+    line-height: 1.6; /* Line spacing */
+    color: #fff; /* White text */
+  }
+  
+  .modal-overlay {
+    position: fixed;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .modal {
+  
+    border-radius: 10px;
+    max-width: 4px;
+    width: 20%;
+    text-align: center;
+    position: relative;
+  }
+  
+  .close-modal-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgb(128, 102, 102);
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  .forgot-password {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    color: #ccc;
+    font-size: 0.9rem;
+  }
+  
+  .register-link {
+    text-align: center;
+    margin-top: 15px;
+    color: #ffffff;
+  }
+  
+  .register-link a {
+    color: #45a049;
+    text-decoration:underline;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .register-link a:hover {
+    text-decoration: underline;
+  }
+  /* Mobile View Specific Adjustments */
+  @media screen and (max-width: 768px) {
+    /* Main Container */
+    .login-page {
+      flex-direction: column; /* Stack items vertically */
+      padding: 15px; /* Reduce padding for smaller screens */
+      height: auto; /* Allow height to adjust to content */
+      justify-content: flex-start; /* Start content from the top */
+      align-items: center; /* Center content horizontally */
+      overflow-y: auto; /* Enable scrolling if content overflows */
+    }
+
+
+  
+    /* Explanation and Login Form Sections */
+    .left-side, .right-side {
+      width: 100%; /* Full width on mobile */
+      max-width: 400px; /* Restrict maximum width */
+      margin: 10px auto; /* Center sections with auto margins */
+      padding: 10px; /* Add inner padding */
+      box-sizing: border-box; /* Include padding in width */
+    }
+    .school-login {
+      font-size: 0.7rem; /* Adjust font size for smaller screens */
+      padding: 8px 15px; /* Reduce padding for better fit */
+      top: 15px; /* Adjust distance from the top */
+      width: 90%; /* Ensure the title doesn't overflow */
+      left: 50%; /* Keep it centered horizontally */
+      transform: translateX(-50%); /* Ensure proper centering */
+    }
+    /* Explanation Section */
+    .explanation {
+      font-size: 1rem; /* Adjust font size for better readability */
+      padding: 15px; /* Reduce padding for smaller screens */
+      border-radius: 10px; /* Maintain rounded corners */
+      text-align: center; /* Center-align text */
+      margin-top:50px;
+    }
+  
+    .explanation h2 {
+      font-size: 1.4rem; /* Reduce heading size */
+      margin-bottom: 10px; /* Space below heading */
+    }
+  
+    .explanation p {
+      font-size: 0.9rem; /* Slightly smaller text size */
+      line-height: 1.4; /* Adjust line spacing */
+    }
+  
+    /* Login Form Section */
+    .login-form {
+      font-size: 1rem; /* Adjust font size for readability */
+      padding: 15px; /* Reduce padding for smaller screens */
+      border-radius: 10px; /* Maintain rounded corners */
+    }
+  
+    .login-form h2 {
+      font-size: 1.4rem; /* Reduce heading size */
+      margin-bottom: 10px; /* Space below heading */
+    }
+  
+    .form-group {
+      margin-bottom: 12px; /* Reduce spacing between form groups */
+    }
+  
+    .form-group label {
+      font-size: 0.9rem; /* Adjust label font size */
+      margin-bottom: 5px; /* Space below label */
+    }
+  
+    .form-group input {
+      width: 100%; /* Full width inputs */
+      padding: 10px; /* Comfortable padding */
+      font-size: 1rem; /* Maintain input text size */
+    }
+  
+    /* Login Button */
+    button.login-btn {
+      width: 100%; /* Full width button */
+      padding: 10px; /* Reduce padding for better fit */
+      font-size: 1rem; /* Adjust text size */
+    }
+  
+    /* Forgot Password and Register Links */
+    .forgot-password {
+      font-size: 0.8rem; /* Smaller text size */
+      margin-top: 8px; /* Adjust spacing above */
+      text-align: center; /* Center-align text */
+    }
+  
+    .register-link {
+      font-size: 0.9rem; /* Adjust text size */
+      margin-top: 10px; /* Adjust spacing */
+      text-align: center; /* Center-align text */
+    }
+  
+    .register-link a {
+      font-size: 0.9rem; /* Maintain link size */
+    }
+  }
+  

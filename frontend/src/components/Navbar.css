@@ -1,0 +1,142 @@
+/* Navbar Styles */
+.navbar {
+  background-color: #417bb2;
+  color: black;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  height: 60px;
+  box-sizing: border-box;
+}
+
+/* Logo */
+.logo h1 {
+  font-size: 24px;
+  margin: 0;
+  color: #ffcc;
+}
+
+/* Nav Links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center; /* Ensures vertical centering */
+  gap: 15px;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%); /* Centers links vertically */
+  width: auto;
+}
+
+.nav-links li {
+  margin: 0;
+}
+
+/* Navbar Links */
+.nav-links a, .settings-btn {
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px;
+
+  padding: 8px 12px;
+  transition: color 0.3s ease, background-color 0.3s ease;
+  border-radius: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.nav-links a:hover, .settings-btn:hover {
+  color: #ffcc00;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Settings Dropdown */
+.settings-container {
+  position: relative;
+}
+
+.settings-dropdown {
+  position: absolute;
+  top: 35px;
+  left: 0;
+  color: black;
+  width: 180px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  list-style: none;
+  padding: 5px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.settings-dropdown li {
+  padding: 10px;
+}
+
+.settings-dropdown li a {
+  text-decoration: none;
+  color: black;
+  font-weight: normal;
+  display: block;
+}
+
+.settings-dropdown li a:hover {
+  background-color: #f4f4f4;
+}
+
+/* Hamburger Icon */
+.hamburger {
+  display: none; /* Hide hamburger icon by default */
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.hamburger .line {
+  width: 25px;
+  height: 3px;
+  background-color: black;
+  transition: transform 0.3s ease;
+}
+
+/* Responsive Navbar */
+@media screen and (max-width: 768px) {
+  /* Show hamburger icon on small screens */
+  .hamburger {
+    display: flex;
+  }
+
+  /* Adjust nav links for mobile */
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #417bb2;
+    position: absolute;
+    top: 50px;
+    right: 10px;
+    width: 200px;
+    border-radius: 5px;
+    padding: 10px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
+
+  .nav-links.active {
+    display: flex; /* Display links when active */
+  }
+
+  .settings-dropdown {
+    position: static;
+    width: 100%;
+  }
+}

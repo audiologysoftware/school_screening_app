@@ -1,0 +1,179 @@
+
+
+/* General Styles for the Login Page */
+.login-page {
+  display: flex;
+  flex-direction: column; /* Default to stacking items for mobile */
+  justify-content: center; /* Center items vertically */
+  align-items: center; /* Center items horizontally */
+  height: 100vh; /* Full height of the viewport */
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+              url('../assest/screening3.jpeg'); /* Corrected relative path */
+  background-size: cover; /* Cover the entire viewport */
+  background-position: center; /* Center the background image */
+  background-repeat: no-repeat; /* Prevent repetition of the background image */
+  color: #fff; /* White text for readability */
+  font-family: Arial, sans-serif;
+  padding: 20px; /* Add some padding for spacing */
+  box-sizing: border-box;
+ 
+}
+
+/* Layout for larger screens */
+.left-side, .right-side {
+  width: 100%;
+  max-width: 500px; /* Max width for both sections */
+  margin: 20px;
+  box-sizing: border-box;
+}
+
+/* Main Container */
+.logging {
+  display: flex; /* Arrange child elements in a row */
+  justify-content: space-between; /* Add space between left and right sections */
+  margin-top: 1100px;
+  align-items: center; /* Align items vertically in the center */
+  gap: 100px; /* Adjust spacing between the two sides */
+  height: 100%; /* Full height */
+  padding: 20px;
+  box-sizing: border-box; /* Include padding in the total width and height */
+}
+
+/* Left Side (Explanation) */
+.left-side {
+  flex: 1; /* Allow left side to take available space */
+  max-width: 50%; /* Restrict to 50% of the container width */
+}
+
+/* Explanation Section */
+.explanation {
+  background-color: rgba(255, 255, 255, 0.2); /* Subtle transparent background */
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Shadow effect */
+  text-align: center;
+}
+
+.explanation h2 {
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+  color: #34da3c; /* Bright green */
+}
+
+.explanation p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #fff;
+}
+
+/* School Login Style */
+.school-login {
+  text-align: center; /* Center text inside the container */
+  font-size: 1rem; /* Adjust font size */
+  color: #d8e214; /* Bright yellow text */
+  font-weight: bold; /* Make the text bold */
+  font-family: Arial, sans-serif; /* Set the font */
+  padding: 10px 20px; /* Add some padding */
+  border-radius: 12px; /* Rounded corners */
+}
+
+/* Right Side (Login Form) */
+.right-side {
+  flex: 1; /* Allow right side to take available space */
+  max-width: 50%; /* Restrict to 50% of the container width */
+  display: flex; /* Ensure the login form is centered */
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+}
+
+/* Login Form */
+.login-form {
+  background: rgba(75, 71, 71, 0.8); /* Dark transparent background */
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  width: 100%; /* Take full width of the parent */
+  max-width: 400px; /* Restrict maximum width */
+}
+
+.login-form h2 {
+  font-size: 1.6rem;
+  margin-bottom: 15px;
+  text-align: center;
+  color: #fff;
+}
+
+/* Cards Container */
+.cards-container {
+  margin-top: 30px; /* Space between sections */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px; /* Space between sections */
+}
+
+/* Book Cards Section */
+.book-cards h2,
+.video-cards h2 {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #34da3c; /* Bright green color */
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Adjust grid layout */
+  gap: 20px; /* Space between grid items */
+  justify-items: center; /* Center grid items */
+}
+
+/* Modal Styles */
+.modal {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.modal-overlay {
+  background-color: rgba(0, 0, 0, 0.6); /* Dark overlay */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+  .login-page {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                url('../assest/screening3.jpeg'); /* Corrected relative path */
+    background-size: cover; /* Ensure the background still covers */
+    background-position: center; /* Keep the background image centered */
+    background-attachment: fixed; /* Ensure the background is fixed in position */
+    padding: 15px; /* Adjust padding for mobile screens */
+    height: auto; /* Allow height to adjust based on content */
+  }
+
+  .logging {
+    flex-direction: column; /* Stack items for smaller screens */
+    height: auto; /* Adjust height */
+    gap: 10px; /* Reduce gap for smaller screens */
+    margin-top: 0px;
+  }
+
+  .school-app {
+    margin-top: 20px; /* Adjusted margin-top for better visibility on mobile */
+    font-size: 1.5rem; /* Smaller font size for mobile */
+  }
+
+  .left-side, .right-side {
+    max-width: 100%; /* Take full width in mobile view */
+  }
+
+  .login-form {
+    width: 100%; /* Ensure full width */
+    max-width: none; /* Remove max-width for smaller screens */
+  }
+}

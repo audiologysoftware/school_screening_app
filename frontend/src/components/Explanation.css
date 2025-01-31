@@ -1,0 +1,71 @@
+/* General Explanation Section Styling */
+.explanation {
+  background-color: #e8f4fd; /* Light blue background */
+  color: #2c3e50; /* Dark gray text */
+  padding: 25px 20px; /* Default padding for a balanced look */
+  text-align: center; /* Center content */
+  border-radius: 15px; /* Smooth rounded edges */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  max-width: 450px; /* Slightly narrower for better readability */
+  margin: 20px auto; /* Center horizontally */
+  box-sizing: border-box; /* Include padding and border in width */
+  font-family: Arial, sans-serif; /* Ensure consistent font family */
+  overflow: hidden; /* Prevent overflow of content */
+}
+
+/* Text Styling */
+.explanation h2 {
+  font-size: 28px; /* Slightly reduced size for a balanced look */
+  font-weight: 600; /* Semi-bold for emphasis */
+  margin-bottom: 15px; /* Adjusted spacing for clarity */
+  text-transform: uppercase; /* Capitalize text */
+  letter-spacing: 1px; /* Consistent letter spacing */
+  color: #2c3e50; /* Consistent dark gray color */
+}
+
+.explanation p {
+  font-size: 16px; /* Moderate font size for readability */
+  color: #34495e; /* Medium gray for contrast */
+  line-height: 1.7; /* Comfortable spacing for paragraphs */
+  font-weight: 300; /* Light text for better readability */
+  padding: 0 10px; /* Slight inner spacing */
+  margin: 10px 0; /* Add margin for spacing between paragraphs */
+}
+
+/* Mobile View Adjustments */
+@media screen and (max-width: 768px) {
+  .explanation {
+    padding: 15px; /* Compact padding for smaller screens */
+    max-width: 90%; /* Increase flexibility for mobile view */
+    margin: 15px auto; /* Adjust spacing for mobile alignment */
+    background-color: #f9fbfc; /* Subtle lighter background for a fresh look */
+  }
+
+  .explanation h2 {
+    font-size: 22px; /* Smaller heading for compact mobile view */
+    margin-bottom: 10px; /* Adjust spacing */
+    letter-spacing: 0.5px; /* Slightly reduce letter spacing */
+  }
+
+  .explanation p {
+    font-size: 14px; /* Smaller font size for better fit */
+    line-height: 1.5; /* Tighter spacing for compactness */
+    padding: 0; /* Remove extra padding for a clean look */
+  }
+}
+
+/* Ultra Small Screens */
+@media screen and (max-width: 480px) {
+  .explanation {
+    padding: 10px; /* Further reduce padding */
+    max-width: 95%; /* Maximize available screen width */
+  }
+
+  .explanation h2 {
+    font-size: 20px; /* Fit heading size for small devices */
+  }
+
+  .explanation p {
+    font-size: 13px; /* Slightly smaller for ultra-small screens */
+  }
+}

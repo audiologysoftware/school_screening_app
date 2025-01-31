@@ -1,0 +1,136 @@
+.registration-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: auto;
+  border-radius: 10px;
+  padding: 20px; /* Adjust padding for comfortable spacing */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  background-color: #333; /* Dark background color */
+  color: white; /* Ensure text is visible on dark background */
+  overflow-y: auto; /* Handle content overflow */
+}
+
+/* Close button style */
+.close-modal-btn {
+  position: absolute;
+  margin: 5px;
+  top: 10px;
+  right: 0px;
+  background-color: #fff;
+  color: #000;
+  border: none;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+/* Category Selection options */
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  text-align: center;
+}
+
+.options button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #417bb2;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.modal-content {
+  text-align: center;
+}
+
+.back-btn {
+  margin-bottom: 15px;
+  padding: 10px 20px;
+  background-color: #6c757d;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.back-btn:hover {
+  background-color: #5a6268;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .registration-modal {
+    width: 90%;
+    padding: 15px;
+    max-height: 80vh; /* Limit the height of the modal */
+    overflow-y: auto; /* Enable vertical scrolling */
+  }
+
+  .options button {
+    padding: 8px 15px;
+    font-size: 14px;
+  }
+
+  .back-btn {
+    padding: 8px 15px;
+    font-size: 14px;
+  }
+
+  .close-modal-btn {
+    width: 25px;
+    height: 25px;
+    font-size: 14px;
+  }
+}
+
+/* Mobile (smaller devices) */
+@media (max-width: 480px) {
+  .registration-modal {
+    width: 90%;
+    padding: 10px;
+    max-width: 400px; /* To ensure modal does not look too big on very small screens */
+    max-height: 80vh; /* Limit modal height for mobile */
+    overflow-y: auto; /* Enable vertical scrolling */
+  }
+
+  .options button {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .back-btn {
+    padding: 8px 15px;
+    font-size: 14px;
+  }
+
+  .close-modal-btn {
+    width: 25px;
+    height: 25px;
+    font-size: 14px;
+  }
+}
+
+/* Scrollbar styling */
+.registration-modal::-webkit-scrollbar {
+  width: 8px; /* Width of the scrollbar */
+}
+
+.registration-modal::-webkit-scrollbar-thumb {
+  background-color: #888; /* Color of the scrollbar */
+  border-radius: 4px; /* Rounded edges of the scrollbar */
+}
+
+.registration-modal::-webkit-scrollbar-thumb:hover {
+  background-color: #555; /* Darker shade when hovered */
+}

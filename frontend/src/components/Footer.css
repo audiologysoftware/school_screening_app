@@ -1,0 +1,68 @@
+/* General Reset */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%; /* Ensures the body and html take up full height */
+  display: flex;
+  flex-direction: column; /* Allows the main content and footer to stack vertically */
+}
+
+/* Main Content Wrapper */
+.main-content {
+  flex: 1; /* Makes this section take up remaining space */
+  padding: 20px; /* Optional padding for content */
+  box-sizing: border-box;
+}
+
+/* Footer Styles */
+.footer {
+  background-color: #2f4046;
+  color: white;
+  padding: 20px 10px; /* Added horizontal padding for smaller screens */
+  text-align: center;
+  box-sizing: border-box; /* Ensures padding is included in total width */
+}
+
+.footer p {
+  margin: 0;
+  font-size: 14px; /* Adjusted font size for readability */
+  line-height: 1.5; /* Improved line spacing */
+}
+
+.social-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 10px 0 0;
+  padding: 0;
+  flex-wrap: wrap; /* Allows wrapping for smaller screens */
+}
+
+.social-links li {
+  margin: 0; /* Ensure no extra spacing around items */
+}
+
+.social-links li a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px; /* Adjusted font size for visibility */
+  transition: color 0.3s ease;
+}
+
+.social-links li a:hover {
+  color: #ffcc00;
+}
+
+/* Responsive Adjustments for Footer */
+@media screen and (max-width: 768px) {
+  .social-links {
+    flex-direction: column; /* Stack items vertically on small screens */
+    gap: 10px;
+    align-items: center; /* Center-align social links */
+  }
+
+  .footer p {
+    font-size: 12px; /* Slightly smaller text for compact screens */
+  }
+}
